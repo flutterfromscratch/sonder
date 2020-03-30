@@ -18,13 +18,8 @@ void main() {
 
     test('tap on experience', () async {
       await driver.runUnsynchronized(() async {
-        await Future.delayed(Duration(seconds: 2));
         final experienceButton = find.byValueKey('experienceButton');
-        print('before screenshot');
-
         await screenshot(driver, config, 'start', waitUntilNoTransientCallbacks: false);
-        print('after screenshot');
-
         await driver.tap(experienceButton);
       });
     });
@@ -38,7 +33,7 @@ void main() {
       });
     });
 
-    test('wait for the next picture to rock up', () async {
+    test('wait for the next picture to show up', () async {
       await driver.runUnsynchronized(() async {
         await Future.delayed(Duration(seconds: 20));
         await screenshot(driver, config, 'nextPicture', waitUntilNoTransientCallbacks: false);
