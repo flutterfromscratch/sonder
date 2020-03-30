@@ -1,0 +1,41 @@
+# Screen capture tests
+# Note: flutter driver expects a pair of files eg, main.dart and main_test.dart
+tests:
+  - test_driver/main.dart
+
+# Interim location of screenshots from tests before processing
+staging: /tmp/screenshots
+
+# A list of locales supported in app
+locales:
+  - en-US
+#  - fr-CA
+
+# A list of devices to run tests on
+devices:
+  android:
+    Nexus 6P:
+      orientation:
+        - 'Portrait'
+        - 'LandscapeLeft'
+    Nexus 5X:
+      orientation:
+        - 'Portrait'
+        - 'LandscapeLeft'
+    Nexus 9:
+      orientation:
+        - 'Portrait'
+        - 'LandscapeLeft'
+
+# Frame screenshots
+frame: true
+
+# Run mode can be one of 'normal' (default), 'recording', 'comparison' or 'archive'.
+
+# If run mode is 'recording' or 'comparison', a directory is required for recorded images.
+recording: /tmp/screenshots_record
+
+# If not intending to upload screenshots, images can be stored in an archive dir.
+# This over-rides output to fastlane dirs.
+# If run mode is 'archive', a directory is required for archived images.
+archive: /tmp/screenshots_archive
