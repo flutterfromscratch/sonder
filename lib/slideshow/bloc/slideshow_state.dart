@@ -4,12 +4,12 @@ import 'package:equatable/equatable.dart';
 
 abstract class SlideshowState extends Equatable {
   const SlideshowState();
-}
 
-class InitialSlideshowState extends SlideshowState {
   @override
   List<Object> get props => [];
 }
+
+class InitialSlideshowState extends SlideshowState {}
 
 class ImageLoadedState extends SlideshowState {
   final Uint8List imageBytes;
@@ -17,12 +17,7 @@ class ImageLoadedState extends SlideshowState {
   ImageLoadedState(this.imageBytes);
 
   @override
-  // TODO: implement props
   List<Object> get props => [imageBytes];
 }
 
-class DefineSonderState extends SlideshowState {
-  @override
-  // TODO: implement props
-  List<Object> get props => [];
-}
+class DefineSonderState extends SlideshowState {}
