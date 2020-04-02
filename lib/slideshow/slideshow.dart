@@ -47,7 +47,7 @@ class _SlideshowPageState extends State<SlideshowPage> {
                                 "(/ˈsɔn.dər/)",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline
+                                    .headline1
                                     .copyWith(color: Colors.grey, fontStyle: FontStyle.italic, fontSize: 20),
                               ),
                             ],
@@ -56,7 +56,7 @@ class _SlideshowPageState extends State<SlideshowPage> {
                         Text(
                           "The profound feeling of realizing that everyone, including strangers passed in the street,"
                           " has a life as complex as one's own, which they are constantly living despite one's personal lack of awareness of it. ",
-                          style: Theme.of(context).textTheme.body1.copyWith(color: Colors.white, fontSize: 20),
+                          style: Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.white, fontSize: 20),
                           textAlign: TextAlign.center,
                         ),
                         RaisedButton(
@@ -68,7 +68,7 @@ class _SlideshowPageState extends State<SlideshowPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               "Experience",
-                              style: Theme.of(context).textTheme.body1.copyWith(color: Colors.white),
+                              style: Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.white),
                             ),
                           ),
                           onPressed: () {
