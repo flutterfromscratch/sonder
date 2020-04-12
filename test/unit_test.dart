@@ -1,11 +1,12 @@
 import 'dart:typed_data';
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:sonder/asset_loader.dart';
 import 'package:sonder/slideshow/bloc/bloc.dart';
+
+import 'mocked/mockedfavourites.dart';
 
 class MockSlideshowBloc extends MockBloc<SlideshowEvent, SlideshowBloc>
     implements SlideshowBloc {}
@@ -19,7 +20,7 @@ void main() {
 
   setUp(() {
     assetLoader = MockAssetLoader();
-    slideshowBloc = SlideshowBloc(assetLoader);
+    slideshowBloc = SlideshowBloc(assetLoader, MockedFavouritesService());
   });
 
   blocTest(

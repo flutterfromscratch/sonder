@@ -12,7 +12,7 @@ class SlideshowBloc extends Bloc<SlideshowEvent, SlideshowState> {
   SlideshowBloc(this.assetLoader, this.favouriteService);
 
   final AssetLoader assetLoader;
-  final FavouriteService favouriteService;
+  final IFavouriteService favouriteService;
 
   final http.Client _http = http.Client();
 

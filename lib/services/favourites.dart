@@ -1,7 +1,14 @@
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-class FavouriteService {
+abstract class IFavouriteService {
+  init();
+  addToFavourite(String url);
+  removeFromFavourite(String url);
+  getFavourites();
+}
+
+class FavouriteService implements IFavouriteService {
   Box<String> favouritesBox;
 
   init() async {
