@@ -13,8 +13,9 @@ class InitialSlideshowState extends SlideshowState {}
 
 class ImageLoadedState extends SlideshowState {
   final Uint8List imageBytes;
+  final String imageUrl;
 
-  ImageLoadedState(this.imageBytes);
+  ImageLoadedState(this.imageBytes, {this.imageUrl});
 
   @override
   List<Object> get props => [imageBytes];

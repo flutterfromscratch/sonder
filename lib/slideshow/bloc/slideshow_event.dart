@@ -28,3 +28,13 @@ class StartSlideshowEvent extends SlideshowEvent {
   // TODO: implement props
   List<Object> get props => [];
 }
+
+class AddFavouriteEvent extends SlideshowEvent {
+  final String favouriteUrl;
+
+  AddFavouriteEvent(this.favouriteUrl);
+
+  @override
+  // TODO: implement props
+  List<Object> get props => [favouriteUrl];
+}
