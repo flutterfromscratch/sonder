@@ -108,6 +108,7 @@ class _SlideshowPageState extends State<SlideshowPage>
                       alignment: Alignment.center,
                       children: <Widget>[
                         GestureDetector(
+                          key: Key('gestureDetector'),
                           onDoubleTap: () {
                             print('double tap');
                             if (state.imageUrl != null) {
@@ -120,7 +121,7 @@ class _SlideshowPageState extends State<SlideshowPage>
                             duration: Duration(seconds: 5),
                             child: Image.memory(
                               state.imageBytes,
-                              key: Key(state.imageBytes.hashCode.toString()),
+                              key: Key(state.imageUrl),
                               fit: BoxFit.cover,
                               height: double.infinity,
                               width: double.infinity,
@@ -170,6 +171,22 @@ class _SlideshowPageState extends State<SlideshowPage>
                                     onPressed: () {
                                       _slideshowBloc.add(ChangePictureEvent());
                                     },
+                                  ),
+                                  Container(
+                                    height: 1,
+                                    width: 1,
+                                    child: Opacity(
+                                      opacity: 0,
+                                      child: IconButton(
+                                        key: Key('testFavouritePhoto'),
+                                        icon: Icon(Icons.edit),
+                                        onPressed: () {
+                                          _slideshowBloc.add(AddFavouriteEvent(
+                                              state.imageUrl));
+                                          animation.forward();
+                                        },
+                                      ),
+                                    ),
                                   )
                                 ],
                               ),
@@ -181,6 +198,7 @@ class _SlideshowPageState extends State<SlideshowPage>
                           child: FadeTransition(
                             opacity: animation,
                             child: Center(
+                              key: Key('favouriteAction'),
                               child: Icon(
                                 Icons.favorite,
                                 size: 80,

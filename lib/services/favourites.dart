@@ -5,7 +5,7 @@ abstract class IFavouriteService {
   init();
   addToFavourite(String url);
   removeFromFavourite(String url);
-  getFavourites();
+  List<String> getFavourites();
 }
 
 class FavouriteService implements IFavouriteService {

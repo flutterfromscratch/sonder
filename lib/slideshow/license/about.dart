@@ -35,6 +35,7 @@ class AboutPage extends StatelessWidget {
             Text(
               "All pictures are provided by the unsplash source API, and are licensed by their respective authors.",
               textAlign: TextAlign.center,
+              key: Key('unsplashLicense'),
             )
           ],
         ),

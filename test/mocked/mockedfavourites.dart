@@ -1,20 +1,16 @@
-import '../../lib/services/favourites.dart';
+import 'package:sonder/services/favourites.dart';
 
 class MockedFavouritesService implements IFavouriteService {
-  List<String> _favourites;
+  List<String> _favourites = List<String>();
 
   @override
   addToFavourite(String url) {
-    // TODO: implement addToFavourite
     _favourites.add(url);
-
-//    throw UnimplementedError();
   }
 
   @override
   getFavourites() {
     return _favourites;
-    // TODO: implement getFavourites
   }
 
   @override

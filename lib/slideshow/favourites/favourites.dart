@@ -22,6 +22,7 @@ class FavouritesPage extends StatelessWidget {
                 crossAxisCount: 2,
                 children: state.favourites
                     .map((e) => Card(
+                          key: Key('favouriteTile'),
                           child: Stack(
                             fit: StackFit.expand,
                             children: <Widget>[
@@ -32,6 +33,7 @@ class FavouritesPage extends StatelessWidget {
                               Align(
                                 alignment: Alignment.bottomRight,
                                 child: IconButton(
+                                  key: Key('removeFavourite'),
                                   icon: Icon(
                                     Icons.close,
                                     color: Colors.red,
