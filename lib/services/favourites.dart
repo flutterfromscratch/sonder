@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -12,7 +13,10 @@ class FavouriteService implements IFavouriteService {
   Box<String> favouritesBox;
 
   init() async {
-    await Hive.initFlutter();
+    if (!kIsWeb) {
+      await Hive.initFlutter();
+    }
+
     favouritesBox = await Hive.openBox('favourites');
   }
 
