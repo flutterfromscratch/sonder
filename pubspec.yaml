@@ -39,7 +39,7 @@ dev_dependencies:
   flutter_native_splash: ^0.1.9
   flutter_launcher_icons: ^0.7.4
   build_runner: ^1.7.2
-  screenshots: ^2.1.1
+  screenshots: 
   test: ^1.14.2
 
 flutter_icons:
